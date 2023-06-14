@@ -73,7 +73,7 @@ impl WsMeta {
                         })
                     }
 
-                    _ => unreachable!(),
+                    _ => return Err(WsErr::Other(de.message())),
                 };
             }
         };
